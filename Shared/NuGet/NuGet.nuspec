@@ -2,22 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Zebble.FilePicker</id>
-    <version>2.11.172</version>
+    <version>2.11.173</version>
     <title>File Picker for Zebble for Xamarin</title>
     <description>A file picker button that opens a dialog allowing the user to select from a range of different file upload options such as "take video", "pick photo", etc.</description>
     <iconUrl>https://raw.githubusercontent.com/Geeksltd/Zebble.FilePicker/master/Shared/NuGet/Icon.png</iconUrl>
 	<projectUrl>https://github.com/Geeksltd/Zebble.FilePicker</projectUrl>
     <authors>Mobile App Technologies Ltd</authors>
     <owners>Mobile App Technologies Ltd</owners>
-    <copyright>Copyright ©2017 | Mobile App Technologies Ltd</copyright>
-    <dependencies>
-      <group targetFramework="MonoAndroid">
-        <dependency id="Zebble" version="4.0.263"></dependency>
-      </group>
-      <group targetFramework="Xamarin.iOS10">
-        <dependency id="Zebble" version="4.0.263"></dependency>
-      </group>
-    </dependencies>
+    <copyright>Copyright ©2017 | Mobile App Technologies Ltd</copyright>    
   </metadata>
   <files>
     <file src="..\..\lib\Zebble.FilePicker.iOS.*" target="lib\Xamarin.iOS10\" />
