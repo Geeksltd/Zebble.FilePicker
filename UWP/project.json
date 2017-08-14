@@ -1,6 +1,7 @@
 ﻿{
   "dependencies": {
-    "Zebble": "4.0.265"
+    "Zebble": "4.1.285",
+    "Zebble.ItemPicker": "3.12.136"
   },
   "frameworks": {
     "uap10.0": {}
