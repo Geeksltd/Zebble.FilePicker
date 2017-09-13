@@ -1,6 +1,6 @@
 ﻿{
   "dependencies": {
-    "Zebble": "4.2.341",
+    "Zebble": "4.2.342",
     "Zebble.IconButton": "3.20.267",
     "Zebble.ItemPicker": "3.12.143",
     "Zebble.OptionsList": "3.14.114"
@@ -17,6 +17,7 @@
     "win10-x64-aot": {}
   }
 }
+
 
 
 
