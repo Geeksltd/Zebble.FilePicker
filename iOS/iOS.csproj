@@ -40,25 +40,25 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Zebble.CheckBox.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.CheckBox.1.22.109\lib\Xamarin.iOS10\Zebble.CheckBox.iOS.dll</HintPath>
+      <HintPath>..\packages\Zebble.CheckBox.1.22.110\lib\Xamarin.iOS10\Zebble.CheckBox.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.IconButton.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.IconButton.3.20.267\lib\Xamarin.iOS10\Zebble.IconButton.iOS.dll</HintPath>
+      <HintPath>..\packages\Zebble.IconButton.3.20.268\lib\Xamarin.iOS10\Zebble.IconButton.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.4.2.342\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
+      <HintPath>..\packages\Zebble.4.3.100\lib\Xamarin.iOS10\Zebble.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.ItemPicker.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.ItemPicker.3.12.143\lib\Xamarin.iOS10\Zebble.ItemPicker.iOS.dll</HintPath>
+      <HintPath>..\packages\Zebble.ItemPicker.3.12.151\lib\Xamarin.iOS10\Zebble.ItemPicker.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.ListView.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.ListView.3.17.129\lib\Xamarin.iOS10\Zebble.ListView.iOS.dll</HintPath>
+      <HintPath>..\packages\Zebble.ListView.3.17.142\lib\Xamarin.iOS10\Zebble.ListView.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.OptionsList.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.OptionsList.3.14.114\lib\Xamarin.iOS10\Zebble.OptionsList.iOS.dll</HintPath>
+      <HintPath>..\packages\Zebble.OptionsList.3.14.122\lib\Xamarin.iOS10\Zebble.OptionsList.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.SearchInput.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.SearchInput.3.18.263\lib\Xamarin.iOS10\Zebble.SearchInput.iOS.dll</HintPath>
+      <HintPath>..\packages\Zebble.SearchInput.3.18.265\lib\Xamarin.iOS10\Zebble.SearchInput.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

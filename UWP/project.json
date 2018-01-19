@@ -1,12 +1,15 @@
 ﻿{
   "dependencies": {
-    "Zebble": "4.2.342",
-    "Zebble.IconButton": "3.20.267",
-    "Zebble.ItemPicker": "3.12.143",
-    "Zebble.OptionsList": "3.14.114"
+    "Zebble": "4.3.100",
+    "Zebble.CheckBox": "1.22.110",
+    "Zebble.IconButton": "3.20.268",
+    "Zebble.ItemPicker": "3.12.151",
+    "Zebble.ListView": "3.17.142",
+    "Zebble.OptionsList": "3.14.122",
+    "Zebble.SearchInput": "3.18.265"
   },
   "frameworks": {
-    "uap10.0": {}
+    "uap10.0.10240": {}
   },
   "runtimes": {
     "win10-arm": {},
@@ -17,7 +20,3 @@
     "win10-x64-aot": {}
   }
 }
-
-
-
-
