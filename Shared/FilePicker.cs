@@ -5,9 +5,8 @@
     using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
-    using Zebble.Device;
 
-    public class FilePicker : Stack, FormField.IControl
+    public partial class FilePicker : Stack, FormField.IControl
     {
         public readonly Button Button = new Button { Id = "Button", Text = "Select" };
         public readonly ImageView Preview = new ImageView { Id = "Preview" };
@@ -138,6 +137,9 @@
             public readonly IconButton PickVideoButton = new IconButton { Id = "PickVideoButton", Text = "Pick Video" };
             public readonly IconButton TakeVideoButton = new IconButton { Id = "TakeVideoButton", Text = "Take Video" };
 
+            public readonly IconButton PickFromGoogleDrive = new IconButton { Id = "PickFromGoogleDrive", Text = "Pick From Drive" };
+            public readonly IconButton PickFromICloud = new IconButton { Id = "PickFromICloud", Text = "Pick From iCloud" };
+
             public Dialog(FilePicker mediaButton)
             {
                 Title.Text = "Please select";
@@ -149,6 +151,11 @@
                 TakePhotoButton.On(x => x.Tapped, Owner.TakePhoto);
                 PickVideoButton.On(x => x.Tapped, Owner.PickVideo);
                 TakeVideoButton.On(x => x.Tapped, Owner.TakeVideo);
+#if ANDROID
+                PickFromGoogleDrive.On(x => x.Tapped, Owner.GoogleDrive);
+#elif IOS
+                PickFromICloud.On(x => x.Tapped, Owner.ICloud);
+#endif
             }
 
             public override async Task OnInitializing()
@@ -170,6 +177,11 @@
                     case MediaSource.PickVideo: return PickVideoButton;
                     case MediaSource.TakePhoto: return TakePhotoButton;
                     case MediaSource.TakeVideo: return TakeVideoButton;
+#if ANDROID
+                    case MediaSource.GoogleDrive: return PickFromGoogleDrive;
+#elif IOS
+                    case MediaSource.ICloud: return PickFromICloud;
+#endif
                     default: throw new NotSupportedException(source + " is not supported for button selection!");
                 }
             }
