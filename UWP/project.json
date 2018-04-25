@@ -1,11 +1,11 @@
 ﻿{
   "dependencies": {
-    "Zebble": "4.4.101",
+    "Zebble": "4.4.107",
     "Zebble.CheckBox": "1.22.110",
-    "Zebble.IconButton": "3.20.268",
+    "Zebble.IconButton": "3.20.269",
     "Zebble.ItemPicker": "3.12.155",
     "Zebble.ListView": "3.17.143",
-    "Zebble.Media": "1.1.100",
+    "Zebble.Media": "1.1.101",
     "Zebble.OptionsList": "3.14.123",
     "Zebble.SearchInput": "3.18.266"
   },
