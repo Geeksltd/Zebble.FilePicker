@@ -57,66 +57,78 @@
             }
         }
 
-        public async Task PickPhoto()
+        public Task PickPhoto()
         {
-            if (!Device.Media.SupportsPickingPhoto())
+            return Thread.UI.Run(async () =>
             {
-                await CloseWithError("Picking photo is not supported.");
-            }
-            else
-            {
-                File = await Device.Media.PickPhoto();
-                if (File.Exists()) Preview.Path(File.FullName);
-                await Nav.HidePopUp();
-            }
+                if (!Device.Media.SupportsPickingPhoto())
+                {
+                    await CloseWithError("Picking photo is not supported.");
+                }
+                else
+                {
+                    File = await Device.Media.PickPhoto();
+                    if (File.Exists()) Preview.Path(File.FullName);
+                    await Nav.HidePopUp();
+                }
+            });
         }
 
-        public async Task TakePhoto()
+        public Task TakePhoto()
         {
-            if (!await Device.Media.IsCameraAvailable())
+            return Thread.UI.Run(async () =>
             {
-                await CloseWithError("Camera is not avalible.");
-            }
-            else if (!Device.Media.SupportsTakingPhoto())
-            {
-                await CloseWithError("Taking photo is not supported.");
-            }
-            else
-            {
-                File = await Device.Media.TakePhoto();
-                if (File.Exists()) Preview.Path(File.FullName);
-                await Nav.HidePopUp();
-            }
+                if (!await Device.Media.IsCameraAvailable())
+                {
+                    await CloseWithError("Camera is not avalible.");
+                }
+                else if (!Device.Media.SupportsTakingPhoto())
+                {
+                    await CloseWithError("Taking photo is not supported.");
+                }
+                else
+                {
+                    File = await Device.Media.TakePhoto();
+                    if (File.Exists()) Preview.Path(File.FullName);
+                    await Nav.HidePopUp();
+                }
+            });
         }
 
-        public async Task PickVideo()
+        public Task PickVideo()
         {
-            if (!Device.Media.SupportsPickingVideo())
+            return Thread.UI.Run(async () =>
             {
-                await CloseWithError("Picking video is not supported.");
-            }
-            else
-            {
-                File = await Device.Media.PickVideo();
-                await Nav.HidePopUp();
-            }
+                if (!Device.Media.SupportsPickingVideo())
+                {
+                    await CloseWithError("Picking video is not supported.");
+                }
+                else
+                {
+                    File = await Device.Media.PickVideo();
+                    await Nav.HidePopUp();
+                }
+            });
         }
 
-        public async Task TakeVideo()
+        public Task TakeVideo()
         {
-            if (!await Device.Media.IsCameraAvailable())
+            return Thread.UI.Run(async () =>
             {
-                await CloseWithError("Camera is not avalible.");
-            }
-            else if (!Device.Media.SupportsTakingVideo())
-            {
-                await CloseWithError("Taking video is not supported.");
-            }
-            else
-            {
-                File = await Device.Media.TakeVideo(new Device.MediaCaptureSettings { VideoQuality = VideoQuality });
-                await Nav.HidePopUp();
-            }
+                if (!await Device.Media.IsCameraAvailable())
+                {
+                    await CloseWithError("Camera is not avalible.");
+                }
+                else if (!Device.Media.SupportsTakingVideo())
+                {
+                    await CloseWithError("Taking video is not supported.");
+                }
+                else
+                {
+                    File = await Device.Media.TakeVideo(new Device.MediaCaptureSettings { VideoQuality = VideoQuality });
+                    await Nav.HidePopUp();
+                }
+            });
         }
 
         async Task CloseWithError(string error)
