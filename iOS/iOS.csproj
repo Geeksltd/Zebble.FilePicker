@@ -56,7 +56,7 @@
       <HintPath>..\packages\Zebble.ListView.3.17.143\lib\Xamarin.iOS10\Zebble.ListView.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Media.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.Media.1.1.101\lib\Xamarin.iOS10\Zebble.Media.iOS.dll</HintPath>
+      <HintPath>..\packages\Zebble.Media.1.1.105\lib\Xamarin.iOS10\Zebble.Media.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.OptionsList.iOS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Zebble.OptionsList.3.14.123\lib\Xamarin.iOS10\Zebble.OptionsList.iOS.dll</HintPath>

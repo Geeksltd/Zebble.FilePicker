@@ -14,7 +14,8 @@
     <FileAlignment>512</FileAlignment>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -99,7 +100,7 @@
       <HintPath>..\packages\Zebble.ListView.3.17.143\lib\MonoAndroid10\Zebble.ListView.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Media.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.Media.1.1.101\lib\MonoAndroid10\Zebble.Media.Android.dll</HintPath>
+      <HintPath>..\packages\Zebble.Media.1.1.105\lib\MonoAndroid10\Zebble.Media.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.OptionsList.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Zebble.OptionsList.3.14.123\lib\MonoAndroid10\Zebble.OptionsList.Android.dll</HintPath>
