@@ -8,6 +8,7 @@
 
     public partial class FilePicker : Stack, FormField.IControl
     {
+        public readonly AsyncEvent FilePicked = new AsyncEvent();
         public readonly Button Button = new Button { Id = "Button", Text = "Select" };
         public readonly ImageView Preview = new ImageView { Id = "Preview" };
 
@@ -57,6 +58,19 @@
             }
         }
 
+        Task RaiseFilePicked(bool isPhoto = true)
+        {
+            if (File.Exists() && isPhoto)
+            {
+                Preview.Path(File.FullName);
+                return FilePicked.Raise();
+            }
+
+            if((File.Exists() && !isPhoto)) return FilePicked.Raise();
+
+            return Task.CompletedTask;
+        }
+
         public Task PickPhoto()
         {
             return Thread.UI.Run(async () =>
@@ -68,7 +82,7 @@
                 else
                 {
                     File = await Device.Media.PickPhoto();
-                    if (File.Exists()) Preview.Path(File.FullName);
+                    await RaiseFilePicked();
                     await Nav.HidePopUp();
                 }
             });
@@ -89,7 +103,7 @@
                 else
                 {
                     File = await Device.Media.TakePhoto();
-                    if (File.Exists()) Preview.Path(File.FullName);
+                    await RaiseFilePicked();
                     await Nav.HidePopUp();
                 }
             });
@@ -106,6 +120,7 @@
                 else
                 {
                     File = await Device.Media.PickVideo();
+                    await RaiseFilePicked();
                     await Nav.HidePopUp();
                 }
             });
@@ -126,6 +141,7 @@
                 else
                 {
                     File = await Device.Media.TakeVideo(new Device.MediaCaptureSettings { VideoQuality = VideoQuality });
+                    await RaiseFilePicked();
                     await Nav.HidePopUp();
                 }
             });
