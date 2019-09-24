@@ -111,28 +111,28 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Zebble">
-      <Version>4.4.185</Version>
+      <Version>4.4.277</Version>
     </PackageReference>
     <PackageReference Include="Zebble.CheckBox">
-      <Version>1.22.110</Version>
+      <Version>1.22.115</Version>
     </PackageReference>
     <PackageReference Include="Zebble.IconButton">
-      <Version>3.20.269</Version>
+      <Version>3.20.273</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ItemPicker">
-      <Version>3.12.155</Version>
+      <Version>3.12.163</Version>
     </PackageReference>
     <PackageReference Include="Zebble.ListView">
-      <Version>3.17.143</Version>
+      <Version>4.10.157</Version>
     </PackageReference>
     <PackageReference Include="Zebble.Media">
-      <Version>1.1.101</Version>
+      <Version>1.1.105</Version>
     </PackageReference>
     <PackageReference Include="Zebble.OptionsList">
-      <Version>3.14.123</Version>
+      <Version>3.15.127</Version>
     </PackageReference>
     <PackageReference Include="Zebble.SearchInput">
-      <Version>3.18.266</Version>
+      <Version>3.18.272</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\Shared\Shared.projitems')" />

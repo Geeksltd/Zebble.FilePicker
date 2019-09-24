@@ -84,29 +84,29 @@
     <Reference Include="Xamarin.GooglePlayServices.Tasks, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Tasks.60.1142.1\lib\MonoAndroid80\Xamarin.GooglePlayServices.Tasks.dll</HintPath>
     </Reference>
-    <Reference Include="Zebble.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.4.4.185\lib\MonoAndroid10\Zebble.Android.dll</HintPath>
+    <Reference Include="Zebble.Android, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zebble.4.4.277\lib\MonoAndroid10\Zebble.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.CheckBox.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.CheckBox.1.22.110\lib\MonoAndroid10\Zebble.CheckBox.Android.dll</HintPath>
+      <HintPath>..\packages\Zebble.CheckBox.1.22.115\lib\MonoAndroid10\Zebble.CheckBox.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.IconButton.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.IconButton.3.20.269\lib\MonoAndroid10\Zebble.IconButton.Android.dll</HintPath>
+      <HintPath>..\packages\Zebble.IconButton.3.20.273\lib\MonoAndroid10\Zebble.IconButton.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.ItemPicker.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.ItemPicker.3.12.155\lib\MonoAndroid10\Zebble.ItemPicker.Android.dll</HintPath>
+      <HintPath>..\packages\Zebble.ItemPicker.3.12.163\lib\MonoAndroid10\Zebble.ItemPicker.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.ListView.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.ListView.3.17.143\lib\MonoAndroid10\Zebble.ListView.Android.dll</HintPath>
+      <HintPath>..\packages\Zebble.ListView.4.10.157\lib\MonoAndroid10\Zebble.ListView.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.Media.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Zebble.Media.1.1.105\lib\MonoAndroid10\Zebble.Media.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.OptionsList.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.OptionsList.3.14.123\lib\MonoAndroid10\Zebble.OptionsList.Android.dll</HintPath>
+      <HintPath>..\packages\Zebble.OptionsList.3.15.127\lib\MonoAndroid10\Zebble.OptionsList.Android.dll</HintPath>
     </Reference>
     <Reference Include="Zebble.SearchInput.Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zebble.SearchInput.3.18.266\lib\MonoAndroid10\Zebble.SearchInput.Android.dll</HintPath>
+      <HintPath>..\packages\Zebble.SearchInput.3.18.272\lib\MonoAndroid10\Zebble.SearchInput.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
