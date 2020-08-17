@@ -6,7 +6,7 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    public partial class FilePicker : Stack, FormField.IControl
+    public partial class FilePicker : Stack, FormField.IControl, IBindableInput
     {
         public readonly AsyncEvent FilePicked = new AsyncEvent();
         public readonly Button Button = new Button { Id = "Button", Text = "Select" };
@@ -20,8 +20,18 @@
             AllowedSources = Enum.GetValues(typeof(MediaSource)).Cast<MediaSource>().ToArray();
         }
 
-        public FileInfo File { get; set; }
 
+        FileInfo @file;
+        public FileInfo File
+        {
+            get => @file;
+            set
+            {
+                if (@file == value) return;
+                @file = value;
+                FilePicked.Raise();
+            }
+        }
         object FormField.IControl.Value
         {
             get => File;
@@ -152,6 +162,9 @@
             await Nav.HidePopUp();
             await Alert.Show(error);
         }
+
+        public void AddBinding(Bindable bindable) => FilePicked.Handle(() => bindable.SetUserValue(File));
+
 
         public class Dialog : Zebble.Dialog
         {
