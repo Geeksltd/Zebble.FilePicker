@@ -29,7 +29,7 @@
             {
                 if (@file == value) return;
                 @file = value;
-                FilePicked.Raise();
+                RaiseFilePicked();
             }
         }
         object FormField.IControl.Value
@@ -70,13 +70,11 @@
 
         Task RaiseFilePicked(bool isPhoto = true)
         {
-            if (File.Exists() && isPhoto)
+            if (File.Exists())
             {
-                Preview.Path(File.FullName);
+                if (isPhoto) Preview.Path(File.FullName);
                 return FilePicked.Raise();
             }
-
-            if((File.Exists() && !isPhoto)) return FilePicked.Raise();
 
             return Task.CompletedTask;
         }
