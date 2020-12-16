@@ -16,9 +16,8 @@ A Zebble plugin to pick a media from library of device.
 
 
 ### Setup
-* Available on NuGet: [https://www.nuget.org/packages/Zebble.FilePicker/](https://www.nuget.org/packages/Zebble.FilePicker/)
-* Install in your platform client projects.
-* Available for iOS, Android and UWP.
+* Add the nuget package [https://www.nuget.org/packages/Zebble.Media/](https://www.nuget.org/packages/Zebble.Media/) in your project.
+* Add the nuget package [https://www.nuget.org/packages/Zebble.FilePicker/](https://www.nuget.org/packages/Zebble.FilePicker/) in your project.
 <br>
 
 
