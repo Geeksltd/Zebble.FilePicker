@@ -5,6 +5,7 @@
     using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
+    using Olive;
 
     public partial class FilePicker : Stack, FormField.IControl, IBindableInput
     {
@@ -19,16 +20,15 @@
         {
             AllowedSources = Enum.GetValues(typeof(MediaSource)).Cast<MediaSource>().ToArray();
         }
-
-
-        FileInfo @file;
+        
+        FileInfo file;
         public FileInfo File
         {
-            get => @file;
+            get => file;
             set
             {
-                if (@file == value) return;
-                @file = value;
+                if (file == value) return;
+                file = value;
                 RaiseFilePicked();
             }
         }
@@ -140,7 +140,7 @@
             {
                 if (!await Device.Media.IsCameraAvailable())
                 {
-                    await CloseWithError("Camera is not avalible.");
+                    await CloseWithError("Camera is not available.");
                 }
                 else if (!Device.Media.SupportsTakingVideo())
                 {

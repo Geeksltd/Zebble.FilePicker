@@ -22,7 +22,7 @@
         {
             if (CurrentActivity == null)
             {
-                Device.Log.Error("GoogleDrive not initialized. Please add the Filepicker InitializeGoogleDrive method to the OnCreate method of your activity");
+                Device.Log.Error("GoogleDrive not initialized. Please add the FilePicker InitializeGoogleDrive method to the OnCreate method of your activity");
                 return Task.CompletedTask;
             }
 

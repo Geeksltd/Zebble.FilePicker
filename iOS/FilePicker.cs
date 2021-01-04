@@ -16,15 +16,15 @@
 
             var viewController = (UIViewController)UIRuntime.NativeRootScreen;
             var pickerMenu = new UIDocumentMenuViewController(allowedUTIs, UIDocumentPickerMode.Open);
-            pickerMenu.DidPickDocumentPicker += (sender, args) =>
+            pickerMenu.DidPickDocumentPicker += (_, args) =>
             {
-                args.DocumentPicker.DidPickDocument += (sndr, pArgs) =>
+                args.DocumentPicker.DidPickDocument += (_, pArgs) =>
                 {
                     var securityEnabled = pArgs.Url.StartAccessingSecurityScopedResource();
                     var document = new UIDocument(pArgs.Url);
                     document.Open(success =>
                     {
-                        if (success) Device.Log.Message("Selected file opend successfully");
+                        if (success) Device.Log.Message("Selected file opened successfully");
                         else Device.Log.Error("The selected file could not open");
                     });
                     pArgs.Url.StopAccessingSecurityScopedResource();

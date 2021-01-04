@@ -1,4 +1,4 @@
-[logo]: https://raw.githubusercontent.com/Geeksltd/Zebble.FilePicker/master/Shared/NuGet/Icon.png "Zebble.FilePicker"
+﻿[logo]: https://raw.githubusercontent.com/Geeksltd/Zebble.FilePicker/master/icon.png "Zebble.FilePicker"
 
 
 ## Zebble.FilePicker
