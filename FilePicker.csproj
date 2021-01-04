@@ -7,7 +7,7 @@
     <RootNamespace>Zebble</RootNamespace>
     <PackageId>Zebble.FilePicker</PackageId>
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <Version>2.11.192</Version>
+    <Version>2.11.193.0</Version>
     <PackOnBuild>true</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>default</LangVersion>
@@ -70,9 +70,9 @@
     <PackageReference Include="Zebble.Media" Version="1.1.117" />
   </ItemGroup>
   <ItemGroup>
-	<Folder Include="Android\" />
-	<Folder Include="iOS\" />
-	<Folder Include="UWP\" />
+    <Folder Include="Android\" />
+    <Folder Include="iOS\" />
+    <Folder Include="UWP\" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid90'">
     <PackageReference Include="Xamarin.GooglePlayServices.Drive">
