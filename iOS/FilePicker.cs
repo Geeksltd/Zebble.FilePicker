@@ -4,6 +4,7 @@
     using MobileCoreServices;
     using System.Threading.Tasks;
     using UIKit;
+    using Olive;
 
     public partial class FilePicker
     {
@@ -24,8 +25,8 @@
                     var document = new UIDocument(pArgs.Url);
                     document.Open(success =>
                     {
-                        if (success) Device.Log.Message("Selected file opened successfully");
-                        else Device.Log.Error("The selected file could not open");
+                        if (success) Log.For(this).Debug("Selected file opened successfully");
+                        else Log.For(this).Error(null, "The selected file could not open");
                     });
                     pArgs.Url.StopAccessingSecurityScopedResource();
                 };

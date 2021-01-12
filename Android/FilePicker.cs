@@ -8,6 +8,7 @@
     using Android.OS;
     using Android.Runtime;
     using System.Threading.Tasks;
+    using Olive;
 
     public partial class FilePicker
     {
@@ -22,7 +23,7 @@
         {
             if (CurrentActivity == null)
             {
-                Device.Log.Error("GoogleDrive not initialized. Please add the FilePicker InitializeGoogleDrive method to the OnCreate method of your activity");
+                Log.For(this).Error(null, "GoogleDrive not initialized. Please add the FilePicker InitializeGoogleDrive method to the OnCreate method of your activity");
                 return Task.CompletedTask;
             }
 
@@ -85,13 +86,13 @@
                         GoogleApiClient.Connect();
                         break;
                     case Result.Canceled:
-                        Device.Log.Error("Unable to sign in, is app registered for Drive access in Google Dev Console?");
+                        Log.For<FilePicker>().Error(null, "Unable to sign in, is app registered for Drive access in Google Dev Console?");
                         break;
                     case Result.FirstUser:
-                        Device.Log.Error("Unable to sign in: RESULT_FIRST_USER");
+                        Log.For<FilePicker>().Error(null, "Unable to sign in: RESULT_FIRST_USER");
                         break;
                     default:
-                        Device.Log.Error("Should never be here: " + resultCode);
+                        Log.For<FilePicker>().Error(null, "Should never be here: " + resultCode);
                         return;
                 }
             }
@@ -99,7 +100,7 @@
 
         static void OnConnectionFailed(ConnectionResult result)
         {
-            Device.Log.Message("GoogleApiClient connection failed: " + result);
+            Log.For<FilePicker>().Debug("GoogleApiClient connection failed: " + result);
             if (!result.HasResolution)
             {
                 GoogleApiAvailability.Instance.GetErrorDialog(UIRuntime.CurrentActivity, result.ErrorCode, 0).Show();
@@ -111,7 +112,7 @@
             }
             catch (IntentSender.SendIntentException e)
             {
-                Device.Log.Error("Exception while starting resolution activity: " + e);
+                Log.For<FilePicker>().Error(e, "Exception while starting resolution activity.");
             }
         }
     }
