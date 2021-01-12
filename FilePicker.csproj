@@ -66,8 +66,8 @@
     <None Remove="Zebble-LicenseAgreement.txt" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Zebble.IconButton" Version="3.20.281" />
-    <PackageReference Include="Zebble.Media" Version="1.1.120" />
+    <PackageReference Include="Zebble.IconButton" Version="3.20.282" />
+    <PackageReference Include="Zebble.Media" Version="1.1.121" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Android\" />

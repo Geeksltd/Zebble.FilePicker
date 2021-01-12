@@ -23,7 +23,7 @@
         {
             if (CurrentActivity == null)
             {
-                Log.For(this).Error(null, "GoogleDrive not initialized. Please add the FilePicker InitializeGoogleDrive method to the OnCreate method of your activity");
+                Log.For(this).Error("GoogleDrive not initialized. Please add the FilePicker InitializeGoogleDrive method to the OnCreate method of your activity");
                 return Task.CompletedTask;
             }
 
@@ -86,13 +86,13 @@
                         GoogleApiClient.Connect();
                         break;
                     case Result.Canceled:
-                        Log.For<FilePicker>().Error(null, "Unable to sign in, is app registered for Drive access in Google Dev Console?");
+                        Log.For<FilePicker>().Error("Unable to sign in, is app registered for Drive access in Google Dev Console?");
                         break;
                     case Result.FirstUser:
-                        Log.For<FilePicker>().Error(null, "Unable to sign in: RESULT_FIRST_USER");
+                        Log.For<FilePicker>().Error("Unable to sign in: RESULT_FIRST_USER");
                         break;
                     default:
-                        Log.For<FilePicker>().Error(null, "Should never be here: " + resultCode);
+                        Log.For<FilePicker>().Error("Should never be here: " + resultCode);
                         return;
                 }
             }

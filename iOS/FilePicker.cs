@@ -26,7 +26,7 @@
                     document.Open(success =>
                     {
                         if (success) Log.For(this).Debug("Selected file opened successfully");
-                        else Log.For(this).Error(null, "The selected file could not open");
+                        else Log.For(this).Error("The selected file could not open");
                     });
                     pArgs.Url.StopAccessingSecurityScopedResource();
                 };
