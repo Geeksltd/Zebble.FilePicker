@@ -14,13 +14,13 @@
         public readonly ImageView Preview = new ImageView { Id = "Preview" };
 
         public MediaSource[] AllowedSources { get; set; }
-        public VideoQuality VideoQuality { get; set; } = VideoQuality.High;
+        public VideoQuality VideoQuality { get; set; }
 
         public FilePicker() : base(RepeatDirection.Horizontal)
         {
             AllowedSources = Enum.GetValues(typeof(MediaSource)).Cast<MediaSource>().ToArray();
         }
-        
+
         FileInfo file;
         public FileInfo File
         {
@@ -84,9 +84,7 @@
             return Thread.UI.Run(async () =>
             {
                 if (!Device.Media.SupportsPickingPhoto())
-                {
                     await CloseWithError("Picking photo is not supported.");
-                }
                 else
                 {
                     File = await Device.Media.PickPhoto();
@@ -101,13 +99,9 @@
             return Thread.UI.Run(async () =>
             {
                 if (!await Device.Media.IsCameraAvailable())
-                {
                     await CloseWithError("Camera is not avalible.");
-                }
                 else if (!Device.Media.SupportsTakingPhoto())
-                {
                     await CloseWithError("Taking photo is not supported.");
-                }
                 else
                 {
                     File = await Device.Media.TakePhoto();
@@ -122,9 +116,7 @@
             return Thread.UI.Run(async () =>
             {
                 if (!Device.Media.SupportsPickingVideo())
-                {
                     await CloseWithError("Picking video is not supported.");
-                }
                 else
                 {
                     File = await Device.Media.PickVideo();
@@ -139,13 +131,9 @@
             return Thread.UI.Run(async () =>
             {
                 if (!await Device.Media.IsCameraAvailable())
-                {
                     await CloseWithError("Camera is not available.");
-                }
                 else if (!Device.Media.SupportsTakingVideo())
-                {
                     await CloseWithError("Taking video is not supported.");
-                }
                 else
                 {
                     File = await Device.Media.TakeVideo(new Device.MediaCaptureSettings { VideoQuality = VideoQuality });
@@ -162,7 +150,6 @@
         }
 
         public void AddBinding(Bindable bindable) => FilePicked.Handle(() => bindable.SetUserValue(File));
-
 
         public class Dialog : Zebble.Dialog
         {
