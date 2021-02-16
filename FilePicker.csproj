@@ -6,7 +6,7 @@
     <RootNamespace>Zebble</RootNamespace>
     <PackageId>Zebble.FilePicker</PackageId>
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <Version>2.11.198.0</Version>
+    <Version>2.11.199.0</Version>
     <PackOnBuild>true</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <DefineConstants>$(DefineConstants)</DefineConstants>
@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Zebble.IconButton" Version="3.20.282" />
-    <PackageReference Include="Zebble.Media" Version="1.1.121" />
+    <PackageReference Include="Zebble.Media" Version="1.1.127" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Android\" />

@@ -13,6 +13,12 @@
         public readonly Button Button = new Button { Id = "Button", Text = "Select" };
         public readonly ImageView Preview = new ImageView { Id = "Preview" };
 
+        event InputChanged InputChanged;
+
+        event InputChanged IBindableInput.InputChanged { add => InputChanged += value; remove => InputChanged -= value; }
+
+        protected virtual void RaiseInputChanged(string property) => InputChanged?.Invoke(property);
+
         public MediaSource[] AllowedSources { get; set; }
         public VideoQuality VideoQuality { get; set; }
 
@@ -73,7 +79,10 @@
             if (File.Exists())
             {
                 if (isPhoto) Preview.Path(File.FullName);
-                return FilePicked.Raise();
+                {
+                    RaiseInputChanged(nameof(File));
+                    return FilePicked.Raise();
+                }
             }
 
             return Task.CompletedTask;
@@ -148,8 +157,6 @@
             await Nav.HidePopUp();
             await Alert.Show(error);
         }
-
-        public void AddBinding(Bindable bindable) => FilePicked.Handle(() => bindable.SetUserValue(File));
 
         public class Dialog : Zebble.Dialog
         {
