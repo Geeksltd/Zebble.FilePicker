@@ -78,11 +78,16 @@
         {
             if (File.Exists())
             {
-                if (isPhoto) Preview.Path(File.FullName);
+                if (isPhoto)
                 {
-                    RaiseInputChanged(nameof(File));
-                    return FilePicked.Raise();
+                    Preview.Path(File.FullName);
                 }
+                RaiseInputChanged(nameof(File));
+                return FilePicked.Raise();
+            }
+            else
+            {
+                Preview.Path("");
             }
 
             return Task.CompletedTask;
