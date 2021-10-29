@@ -6,7 +6,7 @@
     <RootNamespace>Zebble</RootNamespace>
     <PackageId>Zebble.FilePicker</PackageId>
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <Version>2.11.199.1</Version>
+    <Version>2.11.200.0</Version>
     <PackOnBuild>true</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <DefineConstants>$(DefineConstants)</DefineConstants>
