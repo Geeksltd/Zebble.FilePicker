@@ -33,6 +33,8 @@
             get => file;
             set
             {
+                //here you need to remove old image data from cache to raise new file picked from the client
+                Preview.ImageData = null;
                 if (file == value) return;
                 file = value;
                 RaiseFilePicked();
@@ -102,7 +104,6 @@
                 else
                 {
                     File = await Device.Media.PickPhoto();
-                    await RaiseFilePicked();
                     await Nav.HidePopUp();
                 }
             });
@@ -119,7 +120,6 @@
                 else
                 {
                     File = await Device.Media.TakePhoto();
-                    await RaiseFilePicked();
                     await Nav.HidePopUp();
                 }
             });
@@ -134,7 +134,6 @@
                 else
                 {
                     File = await Device.Media.PickVideo();
-                    await RaiseFilePicked();
                     await Nav.HidePopUp();
                 }
             });
@@ -151,7 +150,6 @@
                 else
                 {
                     File = await Device.Media.TakeVideo(new Device.MediaCaptureSettings { VideoQuality = VideoQuality });
-                    await RaiseFilePicked();
                     await Nav.HidePopUp();
                 }
             });
